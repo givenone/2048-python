@@ -71,7 +71,7 @@ class GameGrid(Frame):
                         fg=c.CELL_COLOR_DICT[new_number])
         self.update_idletasks()
 
-    def key_down(self, event):
+    def key_down(self, eventcommands):
         key = repr(event.char)
         if key == c.KEY_BACK and len(self.history_matrixs) > 1:
             self.matrix = self.history_matrixs.pop()
@@ -104,3 +104,4 @@ class GameGrid(Frame):
 
 
 gamegrid = GameGrid()
+
